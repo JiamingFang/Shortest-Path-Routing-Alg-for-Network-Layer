@@ -1,0 +1,321 @@
+R4 sends an INIT: router_id 4
+R4 recieves a CIRCUIT_DB: nbr_link 2
+R4 sends a HELLO: router_id 4 link_id 3
+R4 sends a HELLO: router_id 4 link_id 4
+R4 recieves a HELLO: router_id 3 link_id 3
+R4 sends a LS PDU: sender 4, router_id 4, link_id 3, cost 3, via 3
+R4 sends a LS PDU: sender 4, router_id 4, link_id 4, cost 4, via 3
+R4 recieves a HELLO: router_id 5 link_id 4
+R4 sends a LS PDU: sender 4, router_id 4, link_id 3, cost 3, via 4
+R4 sends a LS PDU: sender 4, router_id 4, link_id 4, cost 4, via 4
+R4 recieves a LS PDU: sender 3, router_id 3, link_id 2, cost 2, via 3
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 1
+R4 -> R3 link 2 cost 2
+
+R4 sends a LS PDU: sender 4, router_id 3, link_id 2, cost 2, via 4
+
+RIB:
+R4 -> R1 -> INF, INF
+R4 -> R2 -> INF, INF
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 3, router_id 3, link_id 7, cost 7, via 3
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 2
+R4 -> R3 link 2 cost 2
+R4 -> R3 link 7 cost 7
+
+R4 sends a LS PDU: sender 4, router_id 3, link_id 7, cost 7, via 4
+
+RIB:
+R4 -> R1 -> INF, INF
+R4 -> R2 -> INF, INF
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 3, router_id 3, link_id 3, cost 3, via 3
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 3
+R4 -> R3 link 2 cost 2
+R4 -> R3 link 7 cost 7
+R4 -> R3 link 3 cost 3
+
+R4 sends a LS PDU: sender 4, router_id 3, link_id 3, cost 3, via 4
+
+RIB:
+R4 -> R1 -> INF, INF
+R4 -> R2 -> INF, INF
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 5, router_id 5, link_id 4, cost 4, via 4
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 3
+R4 -> R3 link 2 cost 2
+R4 -> R3 link 7 cost 7
+R4 -> R3 link 3 cost 3
+R4 -> R5 nbr link 1
+R4 -> R5 link 4 cost 4
+
+R4 sends a LS PDU: sender 4, router_id 5, link_id 4, cost 4, via 3
+
+RIB:
+R4 -> R1 -> INF, INF
+R4 -> R2 -> INF, INF
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 5, router_id 5, link_id 7, cost 7, via 4
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 3
+R4 -> R3 link 2 cost 2
+R4 -> R3 link 7 cost 7
+R4 -> R3 link 3 cost 3
+R4 -> R5 nbr link 2
+R4 -> R5 link 4 cost 4
+R4 -> R5 link 7 cost 7
+
+R4 sends a LS PDU: sender 4, router_id 5, link_id 7, cost 7, via 3
+
+RIB:
+R4 -> R1 -> INF, INF
+R4 -> R2 -> INF, INF
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 5, router_id 5, link_id 6, cost 6, via 4
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 3
+R4 -> R3 link 2 cost 2
+R4 -> R3 link 7 cost 7
+R4 -> R3 link 3 cost 3
+R4 -> R5 nbr link 3
+R4 -> R5 link 4 cost 4
+R4 -> R5 link 7 cost 7
+R4 -> R5 link 6 cost 6
+
+R4 sends a LS PDU: sender 4, router_id 5, link_id 6, cost 6, via 3
+
+RIB:
+R4 -> R1 -> INF, INF
+R4 -> R2 -> INF, INF
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 5, router_id 5, link_id 5, cost 5, via 4
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 3
+R4 -> R3 link 2 cost 2
+R4 -> R3 link 7 cost 7
+R4 -> R3 link 3 cost 3
+R4 -> R5 nbr link 4
+R4 -> R5 link 4 cost 4
+R4 -> R5 link 7 cost 7
+R4 -> R5 link 6 cost 6
+R4 -> R5 link 5 cost 5
+
+R4 sends a LS PDU: sender 4, router_id 5, link_id 5, cost 5, via 3
+
+RIB:
+R4 -> R1 -> INF, INF
+R4 -> R2 -> INF, INF
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 5, router_id 3, link_id 2, cost 2, via 4
+R4 recieves a LS PDU: sender 5, router_id 3, link_id 7, cost 7, via 4
+R4 recieves a LS PDU: sender 3, router_id 5, link_id 4, cost 4, via 3
+R4 recieves a LS PDU: sender 3, router_id 5, link_id 7, cost 7, via 3
+R4 recieves a LS PDU: sender 5, router_id 3, link_id 3, cost 3, via 4
+R4 recieves a LS PDU: sender 3, router_id 5, link_id 6, cost 6, via 3
+R4 recieves a LS PDU: sender 5, router_id 1, link_id 1, cost 1, via 4
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 3
+R4 -> R3 link 2 cost 2
+R4 -> R3 link 7 cost 7
+R4 -> R3 link 3 cost 3
+R4 -> R5 nbr link 4
+R4 -> R5 link 4 cost 4
+R4 -> R5 link 7 cost 7
+R4 -> R5 link 6 cost 6
+R4 -> R5 link 5 cost 5
+R4 -> R1 nbr link 1
+R4 -> R1 link 1 cost 1
+
+R4 sends a LS PDU: sender 4, router_id 1, link_id 1, cost 1, via 3
+
+RIB:
+R4 -> R1 -> INF, INF
+R4 -> R2 -> INF, INF
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 3, router_id 5, link_id 5, cost 5, via 3
+R4 recieves a LS PDU: sender 5, router_id 1, link_id 5, cost 5, via 4
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 3
+R4 -> R3 link 2 cost 2
+R4 -> R3 link 7 cost 7
+R4 -> R3 link 3 cost 3
+R4 -> R5 nbr link 4
+R4 -> R5 link 4 cost 4
+R4 -> R5 link 7 cost 7
+R4 -> R5 link 6 cost 6
+R4 -> R5 link 5 cost 5
+R4 -> R1 nbr link 2
+R4 -> R1 link 1 cost 1
+R4 -> R1 link 5 cost 5
+
+R4 sends a LS PDU: sender 4, router_id 1, link_id 5, cost 5, via 3
+
+RIB:
+R4 -> R1 -> R5, 9
+R4 -> R2 -> INF, INF
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 3, router_id 2, link_id 1, cost 1, via 3
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 3
+R4 -> R3 link 2 cost 2
+R4 -> R3 link 7 cost 7
+R4 -> R3 link 3 cost 3
+R4 -> R5 nbr link 4
+R4 -> R5 link 4 cost 4
+R4 -> R5 link 7 cost 7
+R4 -> R5 link 6 cost 6
+R4 -> R5 link 5 cost 5
+R4 -> R1 nbr link 2
+R4 -> R1 link 1 cost 1
+R4 -> R1 link 5 cost 5
+R4 -> R2 nbr link 1
+R4 -> R2 link 1 cost 1
+
+R4 sends a LS PDU: sender 4, router_id 2, link_id 1, cost 1, via 4
+
+RIB:
+R4 -> R1 -> R5, 9
+R4 -> R2 -> R5, 10
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 3, router_id 2, link_id 2, cost 2, via 3
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 3
+R4 -> R3 link 2 cost 2
+R4 -> R3 link 7 cost 7
+R4 -> R3 link 3 cost 3
+R4 -> R5 nbr link 4
+R4 -> R5 link 4 cost 4
+R4 -> R5 link 7 cost 7
+R4 -> R5 link 6 cost 6
+R4 -> R5 link 5 cost 5
+R4 -> R1 nbr link 2
+R4 -> R1 link 1 cost 1
+R4 -> R1 link 5 cost 5
+R4 -> R2 nbr link 2
+R4 -> R2 link 1 cost 1
+R4 -> R2 link 2 cost 2
+
+R4 sends a LS PDU: sender 4, router_id 2, link_id 2, cost 2, via 4
+
+RIB:
+R4 -> R1 -> R5, 6
+R4 -> R2 -> R3, 5
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 3, router_id 2, link_id 6, cost 6, via 3
+
+Tropology database:
+R4 -> R4 nbr link 2
+R4 -> R4 link 3 cost 3
+R4 -> R4 link 4 cost 4
+R4 -> R3 nbr link 3
+R4 -> R3 link 2 cost 2
+R4 -> R3 link 7 cost 7
+R4 -> R3 link 3 cost 3
+R4 -> R5 nbr link 4
+R4 -> R5 link 4 cost 4
+R4 -> R5 link 7 cost 7
+R4 -> R5 link 6 cost 6
+R4 -> R5 link 5 cost 5
+R4 -> R1 nbr link 2
+R4 -> R1 link 1 cost 1
+R4 -> R1 link 5 cost 5
+R4 -> R2 nbr link 3
+R4 -> R2 link 1 cost 1
+R4 -> R2 link 2 cost 2
+R4 -> R2 link 6 cost 6
+
+R4 sends a LS PDU: sender 4, router_id 2, link_id 6, cost 6, via 4
+
+RIB:
+R4 -> R1 -> R5, 6
+R4 -> R2 -> R3, 5
+R4 -> R3 -> R3, 3
+R4 -> R4 -> Local, 0
+R4 -> R5 -> R5, 4
+
+R4 recieves a LS PDU: sender 3, router_id 1, link_id 1, cost 1, via 3
+R4 recieves a LS PDU: sender 5, router_id 2, link_id 1, cost 1, via 4
+R4 recieves a LS PDU: sender 3, router_id 1, link_id 5, cost 5, via 3
+R4 recieves a LS PDU: sender 5, router_id 2, link_id 2, cost 2, via 4
+R4 recieves a LS PDU: sender 5, router_id 2, link_id 6, cost 6, via 4
